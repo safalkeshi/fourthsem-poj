@@ -1,0 +1,145 @@
+<center>
+    <div id="laundrysection">
+      <form action="">
+        <label for="">We offer a variety of laundry services to meet your needs:</label>
+        <ul>
+          <li>Dry Cleaning</li>
+          <li>Regular Laundry</li>
+          <li>Ironing Services</li>
+          <li>Special Fabric Care</li>
+        </ul>
+  
+        <!-- Select Laundry Service Type Dropdown -->
+        <div id="hide2">
+          <label for="laundry_service">Select Laundry Service:</label><br />
+          <select name="laundry_service" id="laundry_service" required>
+            <option value="dry_cleaning">Dry Cleaning</option>
+            <option value="regular_laundry">Regular Laundry</option>
+            <option value="ironing">Ironing Services</option>
+            <option value="special_fabric">Special Fabric Care</option>
+          </select><br /><br />
+  
+          <!-- Additional Fields for Laundry Request -->
+  
+          <label for="num_cloth">Number of clothes:</label><br />
+          <input type="number" name="num_cloth" id="num_cloth" required /><br />
+  
+          <label for="event_date">Event Date:</label><br />
+          <input type="date" name="event_date" id="event_date" required /><br />
+  
+          <label for="additional_request">Additional Request:</label><br />
+          <textarea name="additional_request" id="additional_request" placeholder="Add any special request"></textarea><br />
+  
+          <button type="submit">Submit Laundry Request</button>
+        </div>
+      </form>
+    </div>
+  
+  </center>
+  
+  <style>
+    /* Laundry Section Styling */
+    #laundrysection {
+      background-color: #ecf0f1;
+      /* Light background */
+      border-radius: 10px;
+      padding: 30px;
+      width: 80%;
+      max-width: 500px;
+      margin: 40px auto;
+      /* Center align the section */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      text-align: left;
+    }
+  
+    #laundrysection label {
+      font-size: 16px;
+      color: #2c3e50;
+      display: block;
+      margin-bottom: 15px;
+    }
+  
+    #laundrysection ul {
+      padding: 0;
+      margin: 0;
+      /* Reset margin for the list */
+      list-style-type: none;
+      /* Remove default list styling */
+    }
+  
+    #laundrysection ul li {
+      padding: 12px;
+      margin: 5px 0;
+      background-color: #fff;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+  
+    #laundrysection ul li:hover {
+      background-color: #3498db;
+      color: white;
+      transform: scale(1.05);
+    }
+  
+    /* Input fields for Laundry Request */
+    #laundrysection input[type="number"],
+    #laundrysection input[type="date"],
+    #laundrysection textarea,
+    #laundrysection select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  
+    #laundrysection input[type="number"] {
+      margin-top: 20px;
+    }
+  
+    #laundrysection button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    #laundrysection button:hover {
+      background-color: #34495e;
+    }
+  
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      #laundrysection {
+        width: 90%;
+      }
+    }
+  
+    #hide2 {
+      display: none;
+    }
+  </style>
+  
+  
+  <script>
+    let laundryli = document.querySelectorAll('#laundrysection li');
+    const hide2 = document.getElementById('hide2');
+    for (let l = 0; l < laundryli.length; l++) {
+      laundryli[l].onclick = () => {
+        if (hide2.style.display === '' || hide2.style.display === 'none') {
+          hide2.style.display = 'block';
+        } else {
+          hide2.style.display = 'none';
+        }
+      }
+    }
+  </script>

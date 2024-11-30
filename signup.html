@@ -1,0 +1,127 @@
+<h1>Create an account</h1>
+<div id="signupform">
+  <form action="../includes/userregister.php" method="POST">
+    <label for="fullname">Full Name:</label><br />
+    <input type="text" placeholder="Enter your Full Name" name="name" required />
+    <br />
+    <label for="email">Email:</label><br />
+    <input type="email" placeholder="Enter your Email" name="email" required />
+    <br />
+    <label for="number">Number:</label><br />
+    <input type="number" name="number" placeholder="Enter Your Phone Number" required />
+    <br />
+    <label for="password">Password:</label><br />
+    <input type="password" name="pwd" placeholder="Requires a password" required />
+    <br />
+    <input type="submit" name="submit" value="Register" />
+    <p>Already have an account? <a href="userloginform.html">Login</a></p>
+  </form>
+</div>
+<style>
+  /* Signup Form Styling */
+  #signupform {
+    background-color: #ecf0f1;
+    /* Light background */
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    max-width: 400px;
+    margin: 40px auto;
+    /* Center align the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: left;
+  }
+
+  /* Centering the header */
+  #signupform h1 {
+    text-align: center;
+    /* Center the heading */
+    color: #2c3e50;
+    margin: 20px 0;
+    /* Add margin above and below the heading */
+  }
+
+  #signupform label {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    display: block;
+    /* Ensure labels are block elements */
+  }
+
+  #signupform input[type="text"],
+  #signupform input[type="email"],
+  #signupform input[type="number"],
+  #signupform input[type="password"],
+  #signupform input[type="submit"] {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Padding for inputs */
+    margin: 8px 0;
+    /* Space between inputs */
+    border: 1px solid #bdc3c7;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Font size for inputs */
+    transition: border-color 0.3s ease;
+    /* Smooth border color transition */
+  }
+
+  #signupform input[type="text"]:focus,
+  #signupform input[type="email"]:focus,
+  #signupform input[type="number"]:focus,
+  #signupform input[type="password"]:focus {
+    border-color: #3498db;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove default outline */
+  }
+
+  #signupform input[type="submit"] {
+    background-color: #2c3e50;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* No border for button */
+    cursor: pointer;
+    /* Pointer cursor for button */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+  }
+
+  #signupform input[type="submit"]:hover {
+    background-color: #34495e;
+    /* Darker color on hover */
+  }
+
+  #signupform p {
+    text-align: center;
+    /* Center align the paragraph */
+  }
+
+  #signupform a {
+    color: #3498db;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
+  }
+
+  #signupform a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    #signupform {
+      width: 90%;
+      /* Adjust width for smaller screens */
+    }
+  }
+</style>
+
+

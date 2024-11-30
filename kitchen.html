@@ -1,0 +1,143 @@
+<center>
+    <div id="kitchenformsection">
+        <form action="">
+            <label for="">Enjoy our kitchen service with a variety of delicious options:</label>
+            <ul>
+                <li>Breakfast</li>
+                <li>Lunch</li>
+                <li>Dinner</li>
+                <li>Snacks and Beverages</li>
+                <li>Special Dietary Meals</li>
+            </ul>
+
+            <!-- Select Meal Type Dropdown -->
+            <div id="hide">
+                <label for="meal_type">Select Meal Type:</label><br />
+                <select name="meal_type" id="meal_type" required>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="snacks">Snacks and Beverages</option>
+                    <option value="special">Special Dietary Meals</option>
+                </select><br /><br />
+
+                <!-- Additional Fields -->
+                <label for="num_guests">Number of Guests:</label><br />
+                <input type="number" name="num_guests" id="num_guests" required /><br />
+
+                <label for="event_date">Event Date:</label><br />
+                <input type="date" name="event_date" id="event_date" required /><br />
+
+                <label for="additional_request">Additional Request:</label><br />
+                <textarea name="additional_request" id="additional_request" placeholder="Add any special request"></textarea><br />
+
+                <button type="submit">Submit Kitchen Request</button>
+            </div>
+        </form>
+    </div>
+    <script src="include.js"></script>
+</center>
+
+<style>
+    /* Kitchen Form Section Styling */
+    #kitchenformsection {
+        background-color: #ecf0f1;
+        border-radius: 10px;
+        padding: 30px;
+        width: 80%;
+        max-width: 500px;
+        margin: 40px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        text-align: left;
+    }
+
+    #kitchenformsection label {
+        font-size: 16px;
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    #kitchenformsection ul {
+        font-size: 16px;
+        color: #2c3e50;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    #kitchenformsection ul li {
+        padding: 12px;
+        margin: 5px 0;
+        background-color: #fff;
+        border: 1px solid #bdc3c7;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    #kitchenformsection ul li:hover {
+        background-color: #3498db;
+        color: white;
+        transform: scale(1.05);
+    }
+
+    #kitchenformsection select,
+    #kitchenformsection input[type="number"],
+    #kitchenformsection input[type="date"],
+    #kitchenformsection textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #bdc3c7;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    #kitchenformsection input[type="number"] {
+        margin-top: 20px;
+        /* Added margin-top for better spacing */
+    }
+
+    #kitchenformsection button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #kitchenformsection button:hover {
+        background-color: #34495e;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        #kitchenformsection {
+            width: 90%;
+        }
+    }
+
+    #hide {
+        display: none;
+    }
+</style>
+<script>
+    // kitchensection
+    let kitchenli = document.querySelectorAll('#kitchenformsection li');
+    const hide = document.getElementById('hide');
+    for (let k = 0; k < kitchenli.length; k++) {
+        kitchenli[k].onclick = () => {
+            if (hide.style.display === 'none' || hide.style.display === '') {
+                hide.style.display = 'block';
+            } else {
+                hide.style.display = 'none';
+            }
+        }
+    }
+</script>
